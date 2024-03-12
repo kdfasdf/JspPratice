@@ -3,4 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <servlet>
+        <servlet-name>first</servlet-name><!--순서 3 -->
+        <servlet-class>com.edu.test.FirstServlet</servlet-class><!--순서 4 -->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>first</servlet-name><!--순서 2 -->
+        <url-pattern>/hello</url-pattern><!--순서 1 -->
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>addInfo</servlet-name>
+        <servlet-class>com.edu.test.AdditionalInfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addInfo</servlet-name>
+        <url-pattern>/addInfo/*</url-pattern>
+    </servlet-mapping>
 </web-app>
